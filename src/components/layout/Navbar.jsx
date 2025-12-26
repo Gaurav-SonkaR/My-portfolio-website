@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 /* eslint-enable no-unused-vars */
 import { Menu, X, Code, Sun, Moon } from 'lucide-react';
 import { NAV_LINKS } from '../../data/constants';
+import myLogo from '../../assets/logo.png';
 
 const Navbar = ({ activeSection, mobileMenuOpen, setMobileMenuOpen, darkMode, toggleTheme }) => {
   return (
@@ -19,9 +20,14 @@ const Navbar = ({ activeSection, mobileMenuOpen, setMobileMenuOpen, darkMode, to
             animate={{ opacity: 1, x: 0 }}
             className="flex-shrink-0 flex items-center gap-2"
           >
-            <div className="p-1.5 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/30">
+            {/* <div className="p-1.5 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/30">
               <Code size={20} className="text-white" />
-            </div>
+            </div> */}
+            <img 
+                src={myLogo} 
+                alt="Logo" 
+                className="w-12 h-12 object-cover rounded-full"
+              />
             {/* CHANGED: Replaced 'GAURAV.DEV' with 'Gaurav Sonkar' */}
             <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
               Gaurav Sonkar

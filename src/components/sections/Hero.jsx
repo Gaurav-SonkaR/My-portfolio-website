@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 /* eslint-enable no-unused-vars */
 import { Download, ChevronDown, ChevronRight, Heart, Database, Brain, Briefcase  } from 'lucide-react';
+import myImage from '../../../assets/profile-pic.png';
 
 const Hero = ({ darkMode }) => {
   const [downloadMenuOpen, setDownloadMenuOpen] = useState(false);
@@ -208,7 +209,7 @@ const Hero = ({ darkMode }) => {
                 darkMode ? 'border-gray-800/50 shadow-cyan-500/20' : 'border-white/50 shadow-xl'
               }`}>
                 <img 
-                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Gaurav&backgroundColor=b6e3f4&clothing=blazerAndShirt&eyebrows=default&eyes=default" 
+                  src={myImage} 
                   alt="Gaurav Profile" 
                   className="w-full h-full object-cover"
                 />

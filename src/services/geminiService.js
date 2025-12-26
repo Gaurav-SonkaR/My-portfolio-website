@@ -1,5 +1,5 @@
 export const callGemini = async (prompt, systemInstruction = "") => {
-  const apiKey = ""; // Environment variable in real app
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Environment variable in real app
   const model = "gemini-2.5-flash-preview-09-2025";
   
   try {
