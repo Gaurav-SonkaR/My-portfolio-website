@@ -5,8 +5,10 @@ export const NAV_LINKS = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
-  { id: 'projects', label: 'Projects' },
+  { id: 'education', label: 'Education'},
   { id: 'achievements', label: 'Certifications' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'projects', label: 'Projects' },
   { id: 'contact', label: 'Contact' },
 ];
 
