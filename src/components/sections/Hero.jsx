@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 /* eslint-enable no-unused-vars */
 import { Download, ChevronDown, ChevronRight, Heart, Database, Brain, Briefcase  } from 'lucide-react';
-import myImage from '../../../assets/profile-pic.png';
+import myImage from '../../assets/profile-pic.jpeg';
 
 const Hero = ({ darkMode }) => {
   const [downloadMenuOpen, setDownloadMenuOpen] = useState(false);

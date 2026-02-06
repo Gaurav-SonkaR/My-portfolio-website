@@ -13,12 +13,12 @@ import Education from './components/sections/Education';
 import Achievements from './components/sections/Achievements';
 import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
-import AIChatBot from './components/features/AIChatBot';
+// import AIChatBot from './components/features/AIChatBot';
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [aiChatOpen, setAiChatOpen] = useState(false);
+  // const [aiChatOpen, setAiChatOpen] = useState(false);
   const [showWelcome, setShowWelcome] = useState(true);
   
   const activeSection = useScrollSpy(NAV_LINKS.map(l => l.id));
@@ -135,7 +135,7 @@ export default function App() {
           <p>© 2025 Gaurav Sonkar. Built with React & Tailwind.</p>
         </footer>
 
-        <AIChatBot isOpen={aiChatOpen} setIsOpen={setAiChatOpen} darkMode={darkMode} />
+        {/* <AIChatBot isOpen={aiChatOpen} setIsOpen={setAiChatOpen} darkMode={darkMode} /> */}
       </div>
     </>
   );
