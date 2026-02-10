@@ -41,13 +41,13 @@ const Hero = ({ darkMode }) => {
                 Gaurav Sonkar
               </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 animate-gradient-x mt-2">
-                Software Developer
+                AI Software Developer
               </span>
             </h1>
             
             <p className={`mt-4 text-xl leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
               Bridging the gap between <b>Modern Web Development</b> and <b>Agentic AI</b>. 
-              Experienced in building scalable Django/Vue systems and autonomous LangGraph workflows.
+              Experienced in building scalable Django and Vue/React systems and autonomous LangGraph workflows.
             </p>
 
             <div className="mt-10 flex flex-col gap-6 items-center lg:items-start">
@@ -80,7 +80,7 @@ const Hero = ({ darkMode }) => {
                       >
                         <div className="p-2 space-y-1">
                           <button
-                            onClick={() => handleDownload('SDE Resume')}
+                            onClick={() => handleDownload('SDEResume')}
                             className={`w-full text-left px-4 py-3 rounded-xl flex items-center gap-4 transition-colors group ${
                               darkMode ? 'hover:bg-white/10 text-gray-200' : 'hover:bg-gray-100 text-gray-700'
                             }`}
@@ -243,7 +243,7 @@ const Hero = ({ darkMode }) => {
                 </div>
                 <div>
                   <p className="text-xs font-medium opacity-70">Expert</p>
-                  <p className="text-sm font-bold">Backend</p>
+                  <p className="text-sm font-bold">Full-Stack</p>
                 </div>
               </motion.div>
 

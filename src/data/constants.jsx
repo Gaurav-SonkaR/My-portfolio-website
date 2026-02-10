@@ -4,25 +4,31 @@ export const NAV_LINKS = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
-  { id: 'education', label: 'Education'},
-  { id: 'achievements', label: 'Certifications' },
   { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
+  { id: 'education', label: 'Education'},
+  { id: 'achievements', label: 'Certifications' },
   { id: 'contact', label: 'Contact' },
 ];
 
 export const SKILLS_DATA = {
-  ai_ml: [
-    { name: 'LangChain/LangGraph', level: 95 },
-    { name: 'RAG Pipelines/Vector DBs', level: 90 },
-    { name: 'DeepSeek R1/LLMs', level: 85 },
-    { name: 'Scikit-Learn/Pandas', level: 88 },
+  programming: [
+    { name: 'Python', level: 95 },
+    { name: 'JavaScript', level: 85 },
+    { name: 'TypeScript', level: 60 },
+    { name: 'C/C++', level: 75 },
+    { name: 'Java', level: 75 },
+    { name: 'SQL (Structured Query Language)', level: 90 },
   ],
   backend: [
-    { name: 'Python (Django/FastAPI)', level: 92 },
-    { name: 'REST API Design', level: 90 },
-    { name: 'PostgreSQL/MySQL', level: 88 },
+    { name: 'Django & Django REST Framework (REST APIs)', level: 94 },
+    { name: 'Python (FastAPI)', level: 80 },
+    { name: 'ColdFusion (FW/1 & Fusebox)', level: 80 },
+    { name: 'Node.js', level: 70 },
     { name: 'Elasticsearch', level: 75 },
+    { name: 'Relational Databases : MySQL & PostgreSQL', level: 90 },
+    { name: 'NoSQL Databases : MongoDB', level: 70 },
+    { name: 'Schedulers & Microservices', level: 70 },
   ],
   frontend: [
     { name: 'Vue.js', level: 85 },
@@ -30,10 +36,17 @@ export const SKILLS_DATA = {
     { name: 'Tailwind CSS/Bootstrap', level: 90 },
     { name: 'JavaScript (ES6+)', level: 85 },
   ],
+  ai_ml: [
+    { name: 'LangChain & LangGraph (Multi-Agent Systems)', level: 95 },
+    { name: 'RAG Pipelines & Vector Databases (FAISS, Chroma)', level: 92 },
+    { name: 'LLM Implementation (DeepSeek R1, GPT-4, Llama)', level: 88 },
+    { name: 'Computer Vision & PyTorch', level: 82 },
+  ],
   cloud_tools: [
     { name: 'AWS (EC2, S3, RDS)', level: 80 },
-    { name: 'Docker/CI/CD', level: 82 },
     { name: 'Git/GitHub', level: 90 },
+    { name: 'Vercel', level: 85 },
+    { name: 'CI/CD Pipelines & Linux OS', level: 80 },
     { name: 'PowerBI/Tableau', level: 75 },
   ]
 };
@@ -42,18 +55,33 @@ export const EXPERIENCE_DATA = [
   {
     id: 1,
     role: "Software Developer",
-    company: "Divyal Technology PVT. LTD. (for Tracsis PLC, UK)",
+    company: "Divyal Technology Pvt. Ltd.",
     duration: "June 2025 - Present",
-    location: "Remote / Hybrid",
-    description: "Promoted to full-time role. Developing scalable PMD platforms using Vue.js frontend and Django REST APIs. Optimized API efficiency by 20% through database query tuning. Managing AWS deployments (EC2, RDS) and maintaining CI/CD pipelines for reliable software delivery."
+    projects: [
+      {
+        title: "Railpay Project",
+        description: "Spearheaded end-to-end full-stack maintenance for Railpay, a mission-critical passenger compensation system, utilizing ColdFusion (FW/1 & Fusebox). I managed the complete lifecycle of AWS server environments, including initial setup, the engineering of automated deployment pipelines, and proactive infrastructure maintenance.",
+        tech: ["ColdFusion","Fusebox", "FW/1", "AWS EC2/RDS", "DevOps", "Cron Job"]
+      },
+      {
+        title: "PMD Project (Project Management Dashboard)",
+        description: "Promoted to full-time role. Developing scalable PMD platforms using Vue.js frontend and Django REST APIs. Optimized API efficiency by 20% through database query tuning. Managing AWS deployments (EC2, RDS) and maintaining CI/CD pipelines for reliable software delivery.",
+        tech: ["Python", "Django", "Vue.js", "MySQL", "REST API", "AWS"]
+      }
+    ]
   },
   {
     id: 2,
     role: "Software Developer Intern",
-    company: "Divyal Technology PVT. LTD.",
+    company: "Divyal Technology Pvt. Ltd.",
     duration: "Feb 2025 - May 2025",
-    location: "Remote / Hybrid",
-    description: "Contributed to PMD system development. Assisted in MySQL schema design, API integration, and initial AWS cloud deployments. Collaborated in an Agile environment, participating in daily Scrum meetings and peer code reviews."
+    projects: [
+      {
+        title: "PMD Project (Project Management Dashboard)",
+        description: "Contributed to PMD system modules, focusing on building scalable REST APIs and optimizing frontend components in Vue.js.",
+        tech: ["Python", "Django", "Vue.js", "MySQL", "REST API", "AWS"]
+      }
+    ]
   }
 ];
 
@@ -64,7 +92,7 @@ export const EDUCATION_DATA = [
     institution: "Banaras Hindu University (BHU), Varanasi",
     duration: "Oct 2023 - June 2025",
     grade: "7.3 GPA",
-    details: "Focused on AI/ML, Data Structures, Software Engineering, and Operating Systems."
+    details: "Core focus on Data Structures & Algorithms, Object Oriented Programming, Database Management System, and Computer Networks. Specialized coursework in Artificial Neural Networks, Artificial Intelligence, Image Processing, Machine Learning, Internet of Things, and Mobile Adhoc Networks (MANETs)."
   }
 ];
 

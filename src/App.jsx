@@ -95,19 +95,23 @@ export default function App() {
                    About Me
                  </h2>
                  <p className={`text-lg leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                   As a <b>Software Developer</b> with a passion for building intelligent systems, I specialize in crafting robust web applications and autonomous AI agents. 
-                   My journey combines academic excellence in Computer Applications with hands-on industry experience in <b>Django, Vue.js, and GenAI</b>.
-                   I thrive in environments that challenge me to innovate and deliver scalable solutions.
+                   As a results-driven <b>Software Developer</b> with a passion for building intelligent, production-grade systems, I specialize in crafting robust web applications and autonomous <b>AI agents</b>. 
+                   My journey combines a strong academic foundation from <b>Banaras Hindu University</b> with hands-on experience delivering scalable solutions for international clients. <br/><br/>
+                
+                    I have a proven track record in optimizing enterprise platforms, including achieving a <b>20% improvement in API efficiency</b> for resource management tools and building high-precision <b>ML pipelines</b> with <b>99.96% accuracy</b>. 
+                    My expertise spans the full development lifecycle—from architecting backends with <b>Django</b> and <b>FastAPI</b> to managing mission-critical infrastructure on <b>AWS</b>. <br/><br/>
+
+                    I thrive at the intersection of <b>Web Development</b> and <b>Agentic AI</b>, where I innovate with <b>LangGraph</b> workflows and <b>RAG pipelines</b> to solve complex automation challenges.
                  </p>
                </motion.div>
             </div>
           </section>
 
           <Experience darkMode={darkMode} />
-          <Education darkMode={darkMode} />
-          <Achievements darkMode={darkMode} />
           <Skills darkMode={darkMode} />
           <Projects darkMode={darkMode} />
+          <Education darkMode={darkMode} />
+          <Achievements darkMode={darkMode} />
           
           {/* Contact Section */}
           <section id="contact" className="py-24 relative z-10">
@@ -120,10 +124,10 @@ export default function App() {
                   <a href="mailto:gauravsonkar.bhu@gmail.com" className="p-4 rounded-full bg-gray-800 text-white hover:bg-blue-600 transition-colors shadow-lg hover:shadow-blue-500/25">
                     <Mail />
                   </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-gray-800 text-white hover:bg-blue-600 transition-colors shadow-lg hover:shadow-blue-500/25">
+                  <a href="https://www.linkedin.com/in/gauravsonkar953bhu/" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-gray-800 text-white hover:bg-blue-600 transition-colors shadow-lg hover:shadow-blue-500/25">
                     <Linkedin />
                   </a>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-gray-800 text-white hover:bg-blue-600 transition-colors shadow-lg hover:shadow-blue-500/25">
+                  <a href="https://github.com/Gaurav-SonkaR" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-gray-800 text-white hover:bg-blue-600 transition-colors shadow-lg hover:shadow-blue-500/25">
                     <Github />
                   </a>
                 </div>
