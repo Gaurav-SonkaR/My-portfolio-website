@@ -42,10 +42,12 @@ const Skills = ({ darkMode }) => {
             >
               <div className="flex items-center mb-6">
                 <div className={`p-2 rounded-lg mr-3 ${
+                  category === 'programming' ? 'bg-green-500/20 text-green-500' :
                   category === 'ai_ml' ? 'bg-purple-500/20 text-purple-500' :
                   category === 'backend' ? 'bg-blue-500/20 text-blue-500' :
                   category === 'frontend' ? 'bg-pink-500/20 text-pink-500' : 'bg-orange-500/20 text-orange-500'
                 }`}>
+                  {category === 'programming' && <Code className="w-6 h-6" />}
                   {category === 'frontend' && <Code className="w-6 h-6" />}
                   {category === 'backend' && <Server className="w-6 h-6" />}
                   {category === 'ai_ml' && <Brain className="w-6 h-6" />}
@@ -70,6 +72,7 @@ const Skills = ({ darkMode }) => {
                         transition={{ duration: 1, ease: "easeOut", delay: sIdx * 0.1 }}
                         className={`h-full rounded-full bg-gradient-to-r ${
                           category === 'frontend' ? 'from-pink-400 to-pink-600' :
+                          category === 'programming' ? 'from-green-400 to-green-600' :
                           category === 'backend' ? 'from-blue-400 to-blue-600' : 
                           category === 'ai_ml' ? 'from-purple-400 to-purple-600' : 'from-orange-400 to-orange-600'
                         }`}
