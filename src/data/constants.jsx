@@ -134,7 +134,7 @@ export const PROJECTS_DATA = [
     description: 'Designed LangGraph workflow with 4 specialized agents for automated research. Integrated Tavily API for web research and DeepSeek R1 for context-aware summarization with recursion safeguards.',
     tech: ['LangGraph', 'LangChain', 'DeepSeek R1', 'Tavily API', 'Python'],
     image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=600&h=400',
-    github: 'https://github.com', 
+    github: 'https://github.com/Gaurav-SonkaR/AI-research-agent', 
     demo: '#',
     stats: { accuracy: '92%', agents: '4' }
   },
@@ -145,7 +145,7 @@ export const PROJECTS_DATA = [
     description: 'Built a fraud detection AI model using Random Forest Classifier (99.96% accuracy). Integrated the model into a Django web app for real-time transaction analysis.',
     tech: ['Django', 'Scikit-Learn', 'Python', 'Bootstrap', 'SQL'],
     image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=600&h=400',
-    github: 'https://github.com',
+    github: 'https://github.com/Gaurav-SonkaR/online-fraud-detection',
     demo: '#',
     stats: { accuracy: '99.96%', latency: 'Low' }
   },
@@ -156,7 +156,7 @@ export const PROJECTS_DATA = [
     description: 'Decoupled architecture with Vue.js frontend and Django REST backend. Features ML-based product recommendations, Elasticsearch for search, and Razorpay payments.',
     tech: ['Vue.js', 'Django REST', 'Elasticsearch', 'Razorpay', 'SQLite'],
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80&w=600&h=400',
-    github: 'https://github.com',
+    github: 'https://github.com/Gaurav-SonkaR/Ecommerce-website-with-django',
     demo: '#',
     stats: { architecture: 'Decoupled', search: 'Elastic' }
   },
@@ -167,7 +167,7 @@ export const PROJECTS_DATA = [
     description: 'Analyzed 10K+ sales records and built interactive PowerBI dashboards for demand forecasting using SQL queries and exploratory data analysis.',
     tech: ['PowerBI', 'SQL', 'MySQL', 'Data Analysis'],
     image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600&h=400',
-    github: 'https://github.com',
+    github: 'https://github.com/Gaurav-SonkaR/Pizza-Sales---SQL',
     demo: '#',
     stats: { records: '10K+', tool: 'PowerBI' }
   },

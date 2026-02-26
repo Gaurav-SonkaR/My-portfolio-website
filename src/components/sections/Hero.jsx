@@ -1,27 +1,22 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 /* eslint-disable no-unused-vars */
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 /* eslint-enable no-unused-vars */
-import { Download, ChevronDown, ChevronRight, Heart, Database, Brain, Briefcase  } from 'lucide-react';
+import { Download, ChevronDown, ChevronRight, Heart, Database, Brain } from 'lucide-react';
 import myImage from '../../assets/profile-pic.jpeg';
 
 const Hero = ({ darkMode }) => {
-  const [downloadMenuOpen, setDownloadMenuOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  // Replace this URL with the actual path to your combined or primary resume file
+  const RESUME_URL = "/Sonkar_Gaurav_Resume.pdf"; 
 
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDownloadMenuOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [dropdownRef]);
-
-  const handleDownload = (role) => {
-    alert(`Downloading ${role} Resume... (Mock Action)`);
-    setDownloadMenuOpen(false);
+  const handleDownload = () => {
+    // This creates a temporary link to trigger the download automatically
+    const link = document.createElement('a');
+    link.href = RESUME_URL;
+    link.download = 'Sonkar_Gaurav_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -51,67 +46,19 @@ const Hero = ({ darkMode }) => {
             </p>
 
             <div className="mt-10 flex flex-col gap-6 items-center lg:items-start">
-              {/* Top Row: Download & View Projects */}
               <div className="flex flex-col sm:flex-row gap-6 w-full justify-center lg:justify-start">
                 
-                {/* Dropdown Container */}
-                <div className="relative z-50 w-full sm:w-auto" ref={dropdownRef}>
-                  <motion.button
-                    onClick={() => setDownloadMenuOpen(!downloadMenuOpen)}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="group relative px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold text-lg shadow-lg shadow-cyan-500/30 overflow-hidden flex items-center justify-center gap-2 w-full"
-                  >
-                    <div className="absolute inset-0 bg-white/20 group-hover:translate-x-full transition-transform duration-500 skew-x-12 -translate-x-full"></div>
-                    <Download className="w-5 h-5" />
-                    <span>Download Resume</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform ${downloadMenuOpen ? 'rotate-180' : ''}`} />
-                  </motion.button>
-
-                  <AnimatePresence>
-                    {downloadMenuOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        className={`absolute top-full left-0 mt-2 w-full sm:w-72 rounded-2xl shadow-2xl border backdrop-blur-2xl overflow-hidden z-[100] ${ 
-                          darkMode ? 'bg-gray-800/95 border-white/10 shadow-black/50' : 'bg-white/95 border-gray-200 shadow-gray-200/50'
-                        }`}
-                      >
-                        <div className="p-2 space-y-1">
-                          <button
-                            onClick={() => handleDownload('SDEResume')}
-                            className={`w-full text-left px-4 py-3 rounded-xl flex items-center gap-4 transition-colors group ${
-                              darkMode ? 'hover:bg-white/10 text-gray-200' : 'hover:bg-gray-100 text-gray-700'
-                            }`}
-                          >
-                            <div className="p-2 rounded-lg bg-blue-500/20 text-blue-500 group-hover:scale-110 transition-transform">
-                              <Briefcase className="w-5 h-5" />
-                            </div>
-                            <div>
-                              <span className="block text-sm font-bold">Software Developer</span>
-                              <span className="block text-xs opacity-60">Focus: Django, Vue, SQL</span>
-                            </div>
-                          </button>
-                          <button
-                            onClick={() => handleDownload('AI Resume')}
-                            className={`w-full text-left px-4 py-3 rounded-xl flex items-center gap-4 transition-colors group ${
-                              darkMode ? 'hover:bg-white/10 text-gray-200' : 'hover:bg-gray-100 text-gray-700'
-                            }`}
-                          >
-                            <div className="p-2 rounded-lg bg-purple-500/20 text-purple-500 group-hover:scale-110 transition-transform">
-                              <Brain className="w-5 h-5" />
-                            </div>
-                            <div>
-                              <span className="block text-sm font-bold">AI/ML Engineer</span>
-                              <span className="block text-xs opacity-60">Focus: LangChain, Agents</span>
-                            </div>
-                          </button>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
+                {/* Single Download Button - No Dropdown */}
+                <motion.button
+                  onClick={handleDownload}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="group relative px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold text-lg shadow-lg shadow-cyan-500/30 overflow-hidden flex items-center justify-center gap-2 w-full sm:w-auto"
+                >
+                  <div className="absolute inset-0 bg-white/20 group-hover:translate-x-full transition-transform duration-500 skew-x-12 -translate-x-full"></div>
+                  <Download className="w-5 h-5" />
+                  <span>Download Resume</span>
+                </motion.button>
 
                 <motion.a
                   href="#projects"
